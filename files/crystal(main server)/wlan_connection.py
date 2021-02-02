@@ -1,11 +1,11 @@
-import time
-import os
+# -*- coding: utf-8 -*-
 import socket
+import threading
+
 
 wlanport = 1234
 serverip = "192.168.1.103"
-import socket
-import threading
+
 
 class Server:
     def __init__(self, ip=serverip, port=wlanport):  # 设置默认值
