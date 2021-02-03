@@ -3,7 +3,7 @@ import serial
 import binascii
 
 
-class serial_communicate:
+class Serial_communicate:
     def __init__(self,port,baudrate=9600,bytesize=8,stopbits=1,parity="N"):
         self.engine = serial.Serial()
         self.engine.port = port  # 设置端口号
@@ -40,12 +40,12 @@ class serial_communicate:
             print("发送失败")
             return (False)
 
-    def read_thread(self):
+    def read_event(self):
         pass
 
 
 if __name__ == "__main__":
-    test = serial_communicate("com4")
+    test = Serial_communicate("com4")
     test.port_open()
     # port_close()
     while True:
